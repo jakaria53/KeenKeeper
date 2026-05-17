@@ -26,6 +26,7 @@ export default function Footer() {
             <Link href="#" className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center hover:bg-white/30 transition">
               <Image src="/assets/instagram.png" alt="Instagram" width={16} height={16} />
             </Link>
+            
           </div>
         </div>
 
