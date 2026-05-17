@@ -1,3 +1,4 @@
+import { ReactNode } from "react";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
@@ -12,7 +13,11 @@ export const metadata = {
   description: "Your personal vault of meaningful connections.",
 };
 
-export default function RootLayout({ children }) {
+type RootLayoutProps = {
+  children: ReactNode;
+};
+
+export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en" className="h-full">
       <body className={`${inter.className} min-h-screen flex flex-col bg-gray-50 text-gray-900`}>
