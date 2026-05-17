@@ -3,6 +3,7 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
 import friendsData from '../data/friends.json';
 
+
 const AppDataContext = createContext(undefined);
 
 export function AppDataProvider({ children }) {
@@ -10,7 +11,7 @@ export function AppDataProvider({ children }) {
   const [timeline, setTimeline] = useState([]);
   const [isLoaded, setIsLoaded] = useState(false);
 
-  // Initialize from JSON or LocalStorage
+  
   useEffect(() => {
     const version = localStorage.getItem('app_version');
     const CURRENT_VERSION = 'v1.1';
@@ -36,7 +37,7 @@ export function AppDataProvider({ children }) {
     setIsLoaded(true);
   }, []);
 
-  // Sync to local storage on change
+
   useEffect(() => {
     if (isLoaded) {
       localStorage.setItem('friends', JSON.stringify(friends));
