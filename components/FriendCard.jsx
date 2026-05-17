@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 export default function FriendCard({ friend }) {
+  
   const statusColors = {
     'on-track': 'bg-emerald-500 text-white',
     'almost due': 'bg-amber-500 text-white',
